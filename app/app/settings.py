@@ -58,6 +58,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             os.path.join(BASE_DIR,'app','template'),
+            os.path.join(BASE_DIR,'app','template','navbar'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
