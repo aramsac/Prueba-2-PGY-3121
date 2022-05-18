@@ -1,6 +1,82 @@
 {% extends "navbar.html" %}{% load static %}
 {% block content %}
 
+
+<!-- Carrusel de imagenes -->
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+  
+        
+        <img src="{% static 'img\carrusel\perro-juguete-1200x900.jpg' %}">
+        
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>comprometido Para usted y su mascota..</h1>
+            <p> Some representative placeholder content for the first slide of the carousel. </p>
+            <p><a class="btn btn-lg btn-primary" href="#info1">Informece sobre </a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="{% static 'img\carrusel\cachorro-perro-dormido-pelu.webp' %}">
+        
+  
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Produtos frescos y de calidad</h1>
+            <p>Some representative placeholder content for the second slide of the carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#info2">info calidad</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="imagenes/panaderia-trabajo.jpg">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Horarios Disponibles</h1>
+            <p>Trabajamos 24/7</p>
+            <p><a class="btn btn-lg btn-primary" href="#info3">info despachos</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+
+
+
+
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Servicios</h1>
+        <p class="lead text-muted">Contamos con una gran variedad de deliciosos productos para enviarles a tus colaboradores de empresa, ya sea para desayuno, almuerzos o bien catering para reuniones.
+          Que el teletrabajo no sea un impedimento para estar más cerca. Cotiza con nosotros productos especiales para enviar para cumpleaños o instancias especiales.</p>
+        <p>
+          <a href="formulario.html" class="btn btn-primary my-2">Realize un pedido</a>
+          <a href="productos.html" class="btn btn-secondary my-2">Vea Nuestros productos</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+
     {{ a }}
     {{ b }}
     

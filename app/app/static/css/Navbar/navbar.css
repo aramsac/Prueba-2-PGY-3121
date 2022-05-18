@@ -4,6 +4,10 @@ body {
   }
   
   .topnav {
+    position: fixed;
+    top: 123px;
+    width: 100%;
+
     overflow: hidden;
     background-color: rgb(255, 255, 255);
     border-radius:1%;
