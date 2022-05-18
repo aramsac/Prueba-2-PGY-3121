@@ -6,11 +6,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}  {%  endblock %}</title>
-       
+    <link rel="stylesheet" href="{% static 'bootstrap\styles.css' %}">
+
+    <!-- barra de navegacion responsiva sin bootstrap-->
+    <link rel="stylesheet" href="{% static 'css\Navbar\navbar.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="{% static 'js\Navbar\navbar.js' %}"></script>
+
+    <!-- carrusel de imagenes -->
+    <link rel="stylesheet" href="{% static 'css/Carrusel/carrusel.css' %}">
+    
+    <!-- animacion icono navbar -->
+    <link rel="stylesheet" href="{% static 'css/icono/icono.css' %}">
+    <link rel="stylesheet" href="{% static 'css/st.css' %}"> 
+    
 </head>
-<body>
+
+<!-- barra de navegacion -->
+<div class="topnav" id="myTopnav" >
+    
+    <a href="" >
+      <i><img class="iconoTienda" src="{% static 'img\icono\iconoPet-chop.png' %}"></i></a>
+    <a href="">Productos</a>
+    <a href="/contacto">contacto </a>
+    <a href=""> <button>hacer compra</button></a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+<!--FIN barra de navegacion -->
+
+
     
       {% block content %}{%  endblock %}
-        
+      
+
+
+    </script>
+    
+    <script src="{% static 'bootstrap\node_modules\bootstrap\dist\js\bootstrap.min.js' %}"></script>
 </body>
 </html>

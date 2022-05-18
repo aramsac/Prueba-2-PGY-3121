@@ -16,8 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from app.views.home import index
-
+from app.views.contacto import contacto_index
+from app.views.formularioContacto import contacto
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/',index)
-]
+    path('index/',index),
+    path('',index),
+    path('contacto/', contacto_index),
+    
+]   
