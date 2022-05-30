@@ -19,24 +19,47 @@
     <!-- animacion icono navbar -->
     <link rel="stylesheet" href="{% static 'css/icono/icono.css' %}">
     <link rel="stylesheet" href="{% static 'css/st.css' %}"> 
-    
+    <link rel="stylesheet" href="{% static 'css\Productos\productos.css' %}">
 </head>
 
 <!-- barra de navegacion -->
-<div class="topnav" id="myTopnav" >
-    
-    <a href="" >
-      <i><img class="iconoTienda" src="{% static 'img\icono\iconoPet-chop.png' %}"></i></a>
-    <a href="">Productos</a>
-    <a href="/contacto">contacto </a>
-    <a href=""> <button>hacer compra</button></a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
+<header>
+  <nav class="navbar navbar-expand-md navbar-ligth fixed-top bg-ligth" id="barraNavegacion" style="background-color: rgb(211, 211, 211);">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/index">
+        <img class="iconoTienda" src="{% static 'img\icono\iconoPet-chop.png' %}">
+        <strong></strong>
+      </a>
+      <button class="navbar-toggler ml-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/index">Home</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/productos">Productos</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/signup">Productos</a>
+          </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contacto">
+              <button class="btn btn-outline-success" >hacer Pedido!</button>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  </header>
 <!--FIN barra de navegacion -->
 
-
+</header>
     
       {% block content %}{%  endblock %}
       

@@ -1,2 +1,209 @@
-{{ name}}
-{{ velue }}
+{% extends 'navbar.html' %} {% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" src="{% static 'css\Formulario-Pedido\formulario-pedido.css' %}">
+</head>
+<body>
+  
+
+
+
+
+
+  <div class="container" style="position:absolute;top:150px;width:90%;left:5%;padding:1%;">
+    <main>
+      <div class="py-5 text-center" id="iconoFormulario">
+        
+        <img class="d-block mx-auto mb-4" id="imgRepartidor" src="imagenes/repartidor-moto.png" alt="" width="100" >
+        <h2>Formulario Pedido</h2>
+        <p class="lead">ingrese sus datos para realizar su pedido</p>
+      </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+        <!-- Formulario datos -->
+        <div class="col-md-7 col-lg-12" style="padding:10%;border-radius:1%;box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)">
+          <h4 class="mb-3">Dirección de Envio</h4>
+         
+          <form class="needs-validation" novalidate >
+            
+            
+            
+            <div class="row g-3" >
+              <div class="col-sm-6" >
+                <label for="firstName" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                  Ingrese su nombre.
+                </div>
+              </div>
+  
+              <div class="col-sm-6">
+                <label for="lastName" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="apellido" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                  Ingrese su apellido.
+                </div>
+              </div>
+  
+  
+              <div class="col-12">
+                <label for="email" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+                <div class="invalid-feedback">
+                  ingrese un correo Electrónico valido
+                </div>
+              </div>
+    
+  
+              <div class="col-12">
+                <label for="address" class="form-label">Dirección</label>
+                <input type="text" class="form-control" id="direccion" placeholder="" required>
+                <div class="invalid-feedback">
+                  ingrese una direccion
+                </div>
+              </div>
+  
+              <div class="col-12">
+                <label for="address2" class="form-label">Dirección 2 <span class="text-muted">(Optional)</span></label>
+                <input type="text" class="form-control" id="direccion2" placeholder="">
+              </div>
+  
+              <div class="col-md-5">
+                <label for="region" class="form-label">region </label>
+                <select class="form-select" id="region" required>
+                  <option value="">region</option>
+                  <option value="region1"> region 1</option>
+                  <option value="region2"> region 2</option>
+                  <option value="region3"> region 3</option>
+                  <option></option>
+                </select>
+                <div class="invalid-feedback">
+                  ingrese una region
+                </div>
+              </div>
+  
+              <div class="col-md-4">
+                <label for="comuna" class="form-label">comuna</label>
+                <select class="form-select" id="comuna" required>
+                  <option value=""></option>
+                  <option value="comuna1"> Comuna 1</option>
+                  <option value="comuna2"> Comuna 2</option>
+                  <option value="comuna3"> Comuna 3</option>
+                </select>
+                <div class="invalid-feedback">
+                  ingrese una comuna
+                </div>
+              </div>
+  
+  
+              <div class="col-md-4">
+                <label for="fechaDespacho" class="form-label">Fecha de Despacho</label>
+                <input type="date" class="form-control" id="fechaDespacho" required>
+              </div>
+  
+  
+  
+            </div>
+  
+            <hr class="my-4">
+  
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="misma-direccion">
+              <label class="form-check-label" for="misma-direccion">La dirección de envío es la misma que mi dirección de facturación</label>
+            </div>
+  
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="guardar-infoDireccion">
+              <label class="form-check-label" for="guardar-infoDireccion">Guarda esta información para la próxima vez</label>
+            </div>
+  
+            <hr class="my-4">
+  
+            <h4 class="mb-3">Pago</h4>
+  
+            <div class="my-3">
+              <div class="form-check">
+                
+                <input id="credito" name="metodoDePago" value="credito" type="radio" class="form-check-input" checked required>
+                <label class="form-check-label" for="credit">Targeta de Credito</label>
+              </div>
+              <div class="form-check">
+                <input id="debito" name="metodoDePago" value="debito" type="radio" class="form-check-input" required>
+                <label class="form-check-label" for="debit">Targeta de Debito</label>
+              </div>
+              <div class="form-check">
+                <input id="paypal" name="metodoDePago" value="paypal" type="radio" class="form-check-input" required>
+                <label class="form-check-label" for="paypal">PayPal</label>
+              </div>
+            </div>
+  
+            <div class="row gy-3">
+              <div class="col-md-6">
+                <label for="cc-name" class="form-label">Número de tarjeta</label>
+                <input type="text" class="form-control" id="numeroTargeta"  placeholder="" required>
+                <small class="text-muted">sdffsfs</small>
+                <div class="invalid-feedback">
+                  Se requiere el nombre en la tarjeta
+                </div>
+              </div>
+  
+  
+              <div class="col-md-3">
+                <label for="cc-expiration" class="form-label">Fecha de expiración</label>
+               
+                <input type="text" class="form-control" id="fechaExpiracion" placeholder="MM/AA" required="true">
+                <div class="invalid-feedback">
+                  Expiration date required
+                </div>
+              </div>
+  
+              <div class="col-md-3">
+                <label for="cc-cvv" class="form-label">CVV</label>
+                <input type="password" class="form-control" id="cvv" placeholder="..." maxlength="3" required/>
+                <div class="invalid-feedback">
+                  Security code required
+                </div>
+              </div>
+            </div>
+  
+            <hr class="my-4">
+            <button class="w-100 btn btn-primary btn-lg" type="submit" onclick="pedido()">hacer pedido</button>
+            
+          </form>
+         
+        </div>
+      </div>
+    </main>
+  </div>
+
+
+</body>
+</html>
+<script src="{% static 'js\Contacto\validar.js' %}"></script>
+
+
+
+
+
+
+
+
+
+  {% endblock %}
+
